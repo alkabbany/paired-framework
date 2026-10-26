@@ -2,6 +2,13 @@
 
 **Process-Anchored Interaction Reporting for AI-Enabled Discovery**
 
+[![arXiv](https://img.shields.io/badge/arXiv-2605.24325-b31b1b.svg)](https://arxiv.org/abs/2605.24325)
+[![License](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](LICENSE)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES2020-f7df1e.svg?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Chrome](https://img.shields.io/badge/Chrome-MV3-4285F4.svg?logo=googlechrome&logoColor=white)](https://developer.chrome.com/docs/extensions/mv3/)
+[![Supabase](https://img.shields.io/badge/Supabase-Backend-3ECF8E.svg?logo=supabase&logoColor=white)](https://supabase.com)
+[![Vercel](https://img.shields.io/badge/Vercel-Dashboard-000000.svg?logo=vercel&logoColor=white)](https://vercel.com)
+
 PAIRED is a framework for documenting the role of generative AI in 
 scientific research. It shifts the unit of disclosure from research 
 products (what AI produced) to decision points (how the research 
