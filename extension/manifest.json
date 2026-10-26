@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "PAIRED — AI Contribution Logger",
+  "version": "1.0.0",
+  "description": "Process-Anchored Interaction Reporting for AI-Enabled Discovery. Log decision points from your AI conversations without leaving the tab.",
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "https://*.supabase.co/*",
+    "https://api.anthropic.com/*",
+    "https://claude.ai/*",
+    "https://chatgpt.com/*",
+    "https://gemini.google.com/*"
+  ],
+
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://claude.ai/chat/*",
+        "https://chatgpt.com/c/*",
+        "https://gemini.google.com/app/*"
+      ],
+      "js": ["content/content.js"],
+      "css": ["content/panel.css"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "PAIRED Logger"
+  },
+
+  "icons": {
+    "16":  "icons/icon16.png",
+    "48":  "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

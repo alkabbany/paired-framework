@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAIRED Logger</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            width:       280px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+            font-size:   13px;
+            background:  #1a1f2e;
+            color:       #e8eaf0;
+        }
+
+        .header {
+            padding:         14px 16px;
+            border-bottom:   1px solid #343a52;
+            background:      #242938;
+            display:         flex;
+            align-items:     center;
+            justify-content: space-between;
+        }
+
+        .header-title {
+            font-size:   15px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .header-title span { color: #5b7cf6; }
+
+        .version {
+            font-size: 10px;
+            color:     #9196aa;
+        }
+
+        .body { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+
+        .status-row {
+            display:     flex;
+            align-items: center;
+            gap:         8px;
+            font-size:   12px;
+            color:       #9196aa;
+        }
+
+        .dot {
+            width:         7px;
+            height:        7px;
+            border-radius: 50%;
+            flex-shrink:   0;
+        }
+
+        .dot.active   { background: #4caf88; box-shadow: 0 0 6px rgba(76,175,136,.5); }
+        .dot.inactive { background: #9196aa; }
+
+        .btn {
+            width:         100%;
+            padding:       10px;
+            border:        none;
+            border-radius: 8px;
+            font-family:   inherit;
+            font-size:     13px;
+            font-weight:   600;
+            cursor:        pointer;
+            transition:    background 0.15s;
+        }
+
+        .btn-primary   { background: #5b7cf6; color: #fff; }
+        .btn-primary:hover { background: #3d5bd4; }
+        .btn-secondary { background: #242938; color: #c5c9d8; border: 1px solid #343a52; }
+        .btn-secondary:hover { border-color: #5b7cf6; }
+
+        .info {
+            font-size:   11px;
+            color:       #9196aa;
+            line-height: 1.5;
+            text-align:  center;
+        }
+
+        .divider {
+            border:     none;
+            border-top: 1px solid #343a52;
+            margin:     2px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-title"><span>PAIRED</span> Logger</div>
+        <div class="version">v1.0.0</div>
+    </div>
+    <div class="body">
+        <div class="status-row">
+            <div class="dot" id="status-dot"></div>
+            <span id="status-text">Checking status...</span>
+        </div>
+
+        <hr class="divider">
+
+        <button class="btn btn-primary" id="open-panel-btn">Open logging panel</button>
+        <button class="btn btn-secondary" id="open-dashboard-btn">↗ Open dashboard</button>
+
+        <hr class="divider">
+
+        <div class="info" id="info-text">
+            Navigate to a Claude, ChatGPT, or Gemini conversation to start logging.
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
